@@ -1,0 +1,37 @@
+
+body {
+	background-color: ;
+	background-image: depth.jpg;
+	margin: 0; 
+	text-align: center;
+}
+
+h1 {
+	color:orange;
+	text-align: center;
+	margin-right: 0px;
+	margin-bottom: 1px;
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+}
+
+ul {list-style-type: square;}
+
+
+p {
+	color: #000000;
+	font-size: 130%;
+}
+	
+#intro {
+	background-color:yellow;
+}
+	
+.nav {
+	font-size: 130%;
+}
+#drawing {
+	background-color: yellow;
+}
+
