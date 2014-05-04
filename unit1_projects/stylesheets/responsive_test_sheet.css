@@ -1,0 +1,109 @@
+header h1 {
+	text-align: center;
+	height: 40px;
+	margin-top: 0px;
+}
+
+header p {
+	text-align: right;	
+	
+}
+
+
+
+h1 {
+	background-color: grey;
+	text-align: left;
+	margin-bottom: 0px;
+}
+
+h5 {
+	text-align:right;
+	background-color: grey;
+	margin: 0px;
+	padding-bottom: 20px;
+}
+
+nav {
+	text-align:center;
+}
+
+li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 5%;
+	border-style: solid;
+	border-width: 1px;
+	margin-bottom: 4px;
+}
+body {
+	width: 70.2781%; /*960px / 1366px*/
+	margin: 0px auto;
+
+	height: auto;
+	background-color: #ffffcc;
+	color: 111;
+}
+
+img {
+	float:left;
+	max-width:50%;
+	margin: 0px 20px 20px 0px;
+
+}
+p {
+	float:right;
+
+	min-width:100px;
+}
+
+
+
+
+
+footer {
+	text-align:center;
+	margin: 0px;
+	background-color: none;
+	bottom: 0px;
+	width: 80%;
+	margin-top: 0px;
+	
+}
+
+
+
+a:hover {
+	color: Red;
+}
+
+@media screen and (max-width: 1000px) {
+
+body {
+	float:none;
+	width:100%;
+	margin: 0;
+
+}
+
+@media screen and (max-width: 700px) {
+
+body {
+	float:none;
+	width:80%;
+	margin: 0;
+
+}
+@media screen and (max-width: 300px) {
+
+body {
+	float:none;
+	display:block;
+	width:100%;
+	margin: 0;
+	
+}
+
+
+
+
