@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script type="text/javascript">
+			var image1 = new Image()
+			image1.src = "images/js1.png"
+			var image2 = new Image()
+			image2.src = "images/js2.png"
+			var image3 = new Image()
+			image3.src = "images/js3.png"
+			var image4 = new Image()
+			image4.src = "images/js4.png"
+		</script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Blog</title>
+		<link rel="stylesheet" href="unit1_projects/stylesheets/dbc2.css" type="text/css">
+		<!--<h1>Technical Blog</h1>-->
+		<img src = "images/blog_header_image.png" height="210" width="800">
+		<h4>~ James M. Miller</h4>
+	</head>
+
+<style>
+
+html {
+	/*background-color:#abcd60;*/
+}
+
+
+.container {
+  width: 800px;
+  margin: 2px auto;
+  padding: 0; 	
+  border: #abcd60 solid 2px;
+}
+.container p{
+ padding-left: 20px;
+ padding-right: 20px;
+}
+h5 { font-style: italic;}
+
+h6 {background-color: #abcd60;}
+.dateline {	font-style: italic;}
+
+body img {
+	
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+</style>
+
+
+	<body class="container">
+		<h6 class="dateline">Sunday, May 11, 2014</h6>
+		<h4>Why is JavaScript so popular in web development?</h4>
+		<!--<p><p>	JavaScript.  I've known about JavaScript for as long as I can remember but have never known it.  Ask anyone who has ever browsed the web, and most will tell you they've heard of it.  The name alone is quite popular... but why JavaScript?<br><br>
+
+It seems JavaScript is the language many programmers hate to love.  It's a pain to use, but it gets results.  So why use it at all?  Unfortunatey, without javascript we're left with static webpages and users experience a lower utility.  With any consumer, there's demand, and when consumers get what they want, sales gets what they want.  <br><br>
+
+Could you image navigating a Cheverolet dealer website where you would constantly refresh every page for every picture or navigate to new pages just to see added features to the dream car you wish to build?  How vital is the website of Ford Cars or Toyota to remain fast and interactive?<br><br>
+
+Keeping your consumers happy is just good business.  As the web evolves, our need to go beyond our boundaries of interaction makes a more competitive marketplace.<br><br>
+
+JavaScript isn't popular because it's pretty.  It's popular because of it's ability.  It's popular because of its speed.  It's better and faster.Margins, borders and padding are the frames that surround the pictures and paragraphs on a website, otherwise content.  Now you can’t see them all the time and each is a little unique.  So I’ll attempt to use a little portrait to illustrate this example.  Before we go on, let’s first understand what each one is.<br><br>-->
+		
+ 		</p><img src="images/js1.png" width="500" height="300" name="slide" /></p>
+<script type="text/javascript">
+        var step=1;
+        function slideit()
+        {
+            document.images.slide.src = eval("image"+step+".src");
+            if(step<4)
+                step++;
+            else
+                step=1;
+            setTimeout("slideit()",10000);
+        }
+        slideit();
+</script>
+	</body>
+
+
+
+
+</html>
