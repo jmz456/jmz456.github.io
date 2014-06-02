@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Blog</title>
+		<link rel="stylesheet" href="unit1_projects/stylesheets/dbc2.css" type="text/css">
+		<!--<h1>Technical Blog</h1>-->
+		<img src = "images/blog_header_image.png" height="210" width="800">
+		<h4>~ James M. Miller</h4>
+	</head>
+
+<style>
+
+html {
+	/*background-color:#abcd60;*/
+}
+
+
+.container {
+  width: 800px;
+  margin: 2px auto;
+  padding: 0; 	
+  border: #abcd60 solid 2px;
+}
+.container p{
+ padding-left: 20px;
+ padding-right: 20px;
+}
+h5 { font-style: italic;}
+
+h6 {background-color: #abcd60;}
+.dateline {	font-style: italic;}
+
+body img {
+	
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+</style>
+
+
+	<body class="container">
+		<h6 class="dateline">Sunday, June 1, 2014</h6>
+		<h4>Functional Programming</h4>
+		<p>I haven't paid attention to functional programming before, but I think I will now.<br><br>
+
+<p>At the base of Functional programming is  the mathematical notion of function composition. “Composing functions f and g means g(f(x)) – f’s output becomes g’s input.” (Erkki Lindpere) It’s a programming paradigm that models computations as the evaluation of expressions. </p>
+<p>You could think of it as a mathematical approach to writing code which is the way it started and has done so for the last 40 some years. </p>
+<p>Object-oriented programming (OOP) is a programming language model organized around objects rather than "actions" and data rather than logic.   It’s intention is to make thinking about programming closer to thinking about the real world. </p>
+<p>A great piece I found on code.google.com really helps to get a visual of the sense.  Applying functional programming to Ruby.  Just a few examples. </p>
+<h3>Don't update variables</h3>
+<p>Don't update them, just create new ones.</p>
+
+<h3>Don't append to arrays or strings</h3>
+<p>No:</p>
+<p>indexes = [1, 2, 3] </p>
+<p>indexes << 4</p>
+<p>indexes # [1, 2, 3, 4] </p>
+<p>Yes: </p>
+<p>indexes = [1, 2, 3] </p>
+<p>all_indexes = indexes + [4] # [1, 2, 3, 4] </p>
+
+<h3>Don't use bang methods which modify in-place</h3>
+<p>No: </p>
+<p>string = "hello"</p>
+<p>string.gsub!(/l/, 'z') </p>
+<p>string # "hezzo"</p>
+<p>Yes: </p>
+<p>string = "hello"</p>
+<p>new_string =  string.gsub(/l/, 'z') # "hezzo"</p>
+
+
+		
+ 
+	</body>
+
+
+
+
+</html>
