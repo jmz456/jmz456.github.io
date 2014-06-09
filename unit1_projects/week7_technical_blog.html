@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Blog</title>
+		<link rel="stylesheet" href="unit1_projects/stylesheets/dbc2.css" type="text/css">
+		<!--<h1>Technical Blog</h1>-->
+		<img src = "images/blog_header_image.png" height="210" width="800">
+		<h4>~ James M. Miller</h4>
+	</head>
+
+<style>
+
+html {
+	/*background-color:#abcd60;*/
+}
+
+
+.container {
+  width: 800px;
+  margin: 2px auto;
+  padding: 0; 	
+  border: #abcd60 solid 2px;
+}
+.container p{
+ padding-left: 20px;
+ padding-right: 20px;
+}
+h5 { font-style: italic;}
+
+h6 {background-color: #abcd60;}
+.dateline {	font-style: italic;}
+
+body img {
+	
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+</style>
+
+
+	<body class="container">
+		<h6 class="dateline">Sunday, June 8, 2014</h6>
+		<h4>SQL Injection</h4>
+		<p>What is an Injection threat and how serious is it?<br><br>
+
+
+<p>An SQL injection is a form of attack against websites.  More specifically, “It’s a code injection technique used to attack data-driven applications in which malicious SQL statements are inserted into an entry field for execution.”( source: http://en.wikipedia.org/wiki/SQL_injection)  In other words, an SQL injection can destroy your database. </p>
+<p>So how does it work?  The following is an example if you didn’t take the necessary precautions.  Let’s say a user with malicious intentions for whatever reasons decides to make havoc of your database.  This user may search for methods of data input like a username or userpass field.  Maybe it’s a search for a customer number or a field for an employee id.  </p>
+<p>Now from your perspective, let’s say you have this input point on your website.  You would take this user’s input and have it append to a customized SQL string, and execute that SQL.  However, when the malicious user puts in a code that can interact with your SQL string, depending on how your string was written, the user might try to include a piece of code that could finish off your SQL string.   Here’s an example of what that might look like: </p>
+<p>Your website contains the following input point: </p>
+<p>Customer ID :    x’; DROP TABLE Orders; --       . Submit . </p>
+<p>You have custom string that looks like the following: </p>
+<p>sqlString = "SELECT * FROM orders WHERE CustomerID = '"
++textbox.value
++ "'";</p>
+<p>This is what gets put into your string and the following is executed. </p>
+<p>sqlString = "SELECT * FROM Orders WHERE CustomerID = 'x'; DROP TABLE Orders; --'"</p>
+<p>executSQL(sqlString); </p>
+<p>Now, what has happened above is the attacker has attempted to end the first clause and create a new one separated by the semicolon.  So instead of running one line of code you could potentially run 2 or more.  The DROP TABLE statement is used to delete a table which would put you in a compromised position.  Now you may not have a table called Orders, but it could likely be something easy to figure out after multiple attempts. </p>
+
+<p>So what can you do to prevent such an attack.  As you progress, learn to create input validation techniques and set rules for input parameters like the type of input or the type of syntax. </p>
+<p>Limit the number of privileges that users have when accessing a database. </p>
+<p>As you become more advanced with sql queries, you will eventually want to start saving your queries.  Ideally, you’re going to want to create a stored procedure .  It’s like a method in Ruby where you can write out the code, give it a name and store it within your database.  Then you can call it and have it executed any number of times.  By writing stored procedures as apposed to standard lines of queries you can increase protection from SQL injection. </p>
+
+
+
+		
+ 
+	</body>
+
+
+
+
+</html>
